@@ -1,5 +1,4 @@
 import imageio
-import numpy        as np
 import os
 
 # Press the green button in the gutter to run the script.
@@ -17,4 +16,3 @@ if __name__ == '__main__':
         for file in files:
             image = imageio.imread(file)
             writer.append_data(image)
-

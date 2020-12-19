@@ -28,11 +28,11 @@ if bounds is not None:
     x,y,w,h = rect
     bounds = bounds - bounds.min(axis=0)
 
-    
+
 # params for ShiTomasi corner detection
-feature_params = dict( maxCorners = 100,
+feature_params = dict( maxCorners = 10,
                        qualityLevel = 0.2,
-                       minDistance = 7,
+                       minDistance = 2,
                        blockSize = 7 )
 
 # Parameters for lucas kanade optical flow
@@ -54,7 +54,7 @@ if x is not None and bounds is not None:
         old_frame = cv.bitwise_and(cropped, cropped, mask=mask)
 
 # cv.imshow('img', old_frame)
-# cv.waitKey(0)  
+# cv.waitKey(0)
 old_gray = cv.cvtColor(old_frame, cv.COLOR_BGR2GRAY)
 p0 = cv.goodFeaturesToTrack(old_gray, mask = None, **feature_params)
 
