@@ -1,4 +1,19 @@
+__pycache__/
 .idea/
+<<<<<<< HEAD
 .vscode
 venv/
 video/
+=======
+.vscode/
+logs/
+bin/
+venv/
+
+*.png
+*.jpg
+*.mov
+*.mp4
+*.pyc
+*.zip
+>>>>>>> 1ee7c562e9c5192e6b0fe29b7c0dc3d6be2ce98c
