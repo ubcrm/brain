@@ -1,5 +1,8 @@
 import imageio
+<<<<<<< HEAD
 import numpy as np
+=======
+>>>>>>> 1d6ad063466d70379a5f9de07a292f076851c5ec
 import os
 from pathlib import Path
 import re
@@ -13,6 +16,7 @@ def find_images_in_path(image_path):
     '''Given a path, finds the simulation output images in that directory and returns
         a list of the relevant file names, separated into batches by simulation number'''
     files = []
+<<<<<<< HEAD
     simulation_titles = []
     for r, d, f in os.walk(image_path):
         simulation_titles = count_simulations(f)
@@ -49,3 +53,14 @@ if __name__ == '__main__':
 
 
 
+=======
+    for r, d, f in os.walk(path):
+        for file in f:
+            if '.png' in file:
+                files.append(os.path.join(r, file))
+
+    with imageio.get_writer(path+"movie.gif", mode='I') as writer:
+        for file in files:
+            image = imageio.imread(file)
+            writer.append_data(image)
+>>>>>>> 1d6ad063466d70379a5f9de07a292f076851c5ec
