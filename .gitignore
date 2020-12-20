@@ -1,2 +1,13 @@
+__pycache__/
 .idea/
+.vscode/
+logs/
+bin/
 venv/
+
+*.png
+*.jpg
+*.mov
+*.mp4
+*.pyc
+*.zip
