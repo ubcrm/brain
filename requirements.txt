@@ -1,1 +1,4 @@
 opencv-python>=4.0.1
+numpy~=1.19.2
+modules~=1.0.0
+imageio~=2.9.0
