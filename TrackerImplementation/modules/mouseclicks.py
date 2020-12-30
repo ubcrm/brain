@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 def mouseclicks(event,x,y,flags, parameters):
-    global counter, pts, counter
+    global counter, pts, frame
     if event == cv2.EVENT_LBUTTONDOWN:
         pts[counter] = x,y
         cv2.circle(frame,(x,y), 3, (0, 255, 0), -1)
